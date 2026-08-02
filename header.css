@@ -1,0 +1,207 @@
+.header {
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  /* Removed fixed positioning, background, and blur */
+  background-color: transparent;
+}
+
+.left-section {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  width: 160px;
+  align-items: center;
+}
+
+.hamburger-menu {
+  height: 24px;
+  filter: invert(1);
+  margin-left: 16px;
+  margin-right: 24px;
+}
+
+.youtube-logo {
+  position: relative;
+  height: 20px;
+}
+
+.server-region {
+  position: absolute;
+  color: #aaaaaa;
+  font-size: 10px;
+  margin-bottom: 20px;
+  margin-left: 161px;
+}
+
+.middle-section {
+  display: flex;
+  flex: 1;
+  max-width: 720px;
+  margin-left: 190px;
+  margin-right: 114px;
+  align-items: center;
+}
+
+.search-bar {
+  color: white;
+  font-size: 16px;
+  background-color: #131212;
+  flex: 1;
+  height: 40px;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border: 1px solid rgb(49, 49, 49);
+  padding-left: 15.5px;
+  padding-bottom: 2px;
+  box-sizing: border-box;
+  width: 0;
+  outline: none;
+}
+
+.search-bar:focus-within {
+  border: 1px solid #1c62b9;
+}
+
+.search-bar::placeholder {
+  font-size: 16px;
+
+}
+
+.search-icon {
+  height: 24px;
+  width: 24px;
+  fill: white;
+}
+
+.search-button {
+  width: 64px;
+  height: 40px;
+
+  /* The Perfect Dark Glass Background */
+  background-color: rgba(255, 255, 255, 0.08);
+
+  /* The Clean, Dark Border */
+  border: 1px solid #303030;
+  border-left: none;
+  /* Removes the left border so it merges with the search input field! */
+
+  margin-left: -1px;
+  /* Pulls it tight against the search input field */
+  margin-right: 16px;
+  /* The Pill Shape */
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+
+  /* Centering the icon */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+
+.voice-search-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  border: none;
+  background-color: rgba(255, 255, 255, .1);
+}
+
+.bell-icon-button,
+.voice-search-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.bell-icon-button .tooltip,
+.voice-search-button .tooltip {
+  position: absolute;
+  color: white;
+  font-size: 12px;
+  background-color: rgba(97, 97, 97, 1);
+  padding: 10px 8px;
+  border-radius: 4px;
+  font-weight: 400;
+  bottom: -50px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 200;
+  transition: opacity .15s;
+}
+
+.bell-icon-button:hover .tooltip,
+.voice-search-button:hover .tooltip {
+  opacity: 1;
+}
+
+.mic-icon {
+  height: 24px;
+  width: 24px;
+  fill: white;
+}
+
+.right-section {
+  width: 215px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.create-button {
+  display: flex;
+  height: 40px;
+  width: 97px;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2px;
+
+  border-radius: 50px;
+  border: none;
+  background-color: rgba(255, 255, 255, .1);
+  box-sizing: border-box;
+}
+
+.bell-icon {
+  height: 24px;
+  width: 24px;
+  filter: invert(1);
+}
+
+.bell-icon-button {
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  border-width: 1px;
+  box-sizing: border-box;
+  /* fill: white; */
+  background-color: transparent;
+
+}
+
+.bell-icon-button:hover {
+  background-color: rgba(36, 36, 36, .8);
+  background-color: rgb(73, 73, 73);
+}
+
+.user-profile-picture img {
+  width: 34px;
+  height: 34px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.user-profile-picture {
+  margin-left: 11px;
+  display: flex;
+  align-items: center;
+}

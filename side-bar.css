@@ -1,0 +1,40 @@
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  bottom: 0;
+  width: 72px;
+  background-color: transparent;
+  padding-left: 4px;
+  z-index: 200;
+}
+
+.sidebar-link {
+  width: 64px;
+  display: flex;
+  flex-direction: column;
+  height: 76px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.sidebar-link:hover {
+  background-color: #272727;
+  /* The YouTube dark mode hover effect */
+}
+
+.sidebar-link div {
+  margin-top: 7px;
+  font-size: 10px;
+  color: white;
+}
+
+.sidebar-icon {
+  height: 24px;
+  width: 24px;
+  fill: white;
+}

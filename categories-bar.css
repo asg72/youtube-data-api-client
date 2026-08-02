@@ -1,0 +1,52 @@
+/* The container for the chips */
+.categories-bar {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  padding: 12px 24px;
+  padding-left: 96px;
+  overflow-x: scroll;
+  white-space: nowrap;
+  /* Removed fixed positioning, background, and blur */
+  background-color: transparent;
+}
+
+/* Hide the ugly scrollbar for Chrome, Safari and Opera */
+.categories-bar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide the scrollbar for IE, Edge and Firefox */
+.categories-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Styling the individual chips */
+.category-chip {
+  padding: 8px 12px;
+  padding-top: 7px;
+  border-radius: 8px;
+  background-color: #272727;
+  color: #f1f1f1;
+  border: none;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, .1);
+
+  transition: background-color 0.2s;
+  /* Smooth hover effect */
+}
+
+.category-chip:hover {
+  background-color: #3f3f3f;
+}
+
+/* The styling for the currently selected category */
+.category-chip.active {
+  background-color: #f1f1f1;
+  color: #0f0f0f;
+}

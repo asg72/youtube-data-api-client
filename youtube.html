@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Youtube Clone
+  </title>
+
+  <link rel="stylesheet" href="video.css">
+  <link rel="stylesheet" href="general.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="categories-bar.css">
+  <link rel="stylesheet" href="side-bar.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header class="top-nav-wrapper">
+    <div class="header">
+      <div class="left-section">
+        <svg class="hamburger-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false"
+          aria-hidden="true" style="pointer-events: none; display: inherit;">
+          <path
+            d="M20 5H4a1 1 0 000 2h16a1 1 0 100-2Zm0 6H4a1 1 0 000 2h16a1 1 0 000-2Zm0 6H4a1 1 0 000 2h16a1 1 0 000-2Z">
+          </path>
+        </svg>
+
+        <a href="https://www.youtube.com/?bp=wgUCEAE%3D">
+          <svg class="youtube-logo" xmlns="http://www.w3.org/2000/svg" id="yt-ringo2-svg_yt2" viewBox="0 0 93 20"
+            focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit;">
+            <g>
+              <path
+                d="M14.4848 20C14.4848 20 23.5695 20 25.8229 19.4C27.0917 19.06 28.0459 18.08 28.3808 16.87C29 14.65 29 9.98 29 9.98C29 9.98 29 5.34 28.3808 3.14C28.0459 1.9 27.0917 0.94 25.8229 0.61C23.5695 0 14.4848 0 14.4848 0C14.4848 0 5.42037 0 3.17711 0.61C1.9286 0.94 0.954148 1.9 0.59888 3.14C0 5.34 0 9.98 0 9.98C0 9.98 0 14.65 0.59888 16.87C0.954148 18.08 1.9286 19.06 3.17711 19.4C5.42037 20 14.4848 20 14.4848 20Z"
+                fill="#FF0033"></path>
+              <path d="M19 10L11.5 5.75V14.25L19 10Z" fill="white"></path>
+            </g>
+            <g id="youtube-paths_yt2" fill="white">
+              <path
+                d="M37.1384 18.8999V13.4399L40.6084 2.09994H38.0184L36.6984 7.24994C36.3984 8.42994 36.1284 9.65994 35.9284 10.7999H35.7684C35.6584 9.79994 35.3384 8.48994 35.0184 7.22994L33.7384 2.09994H31.1484L34.5684 13.4399V18.8999H37.1384Z">
+              </path>
+              <path
+                d="M44.1003 6.29994C41.0703 6.29994 40.0303 8.04994 40.0303 11.8199V13.6099C40.0303 16.9899 40.6803 19.1099 44.0403 19.1099C47.3503 19.1099 48.0603 17.0899 48.0603 13.6099V11.8199C48.0603 8.44994 47.3803 6.29994 44.1003 6.29994ZM45.3903 14.7199C45.3903 16.3599 45.1003 17.3899 44.0503 17.3899C43.0203 17.3899 42.7303 16.3499 42.7303 14.7199V10.6799C42.7303 9.27994 42.9303 8.02994 44.0503 8.02994C45.2303 8.02994 45.3903 9.34994 45.3903 10.6799V14.7199Z">
+              </path>
+              <path
+                d="M52.2713 19.0899C53.7313 19.0899 54.6413 18.4799 55.3913 17.3799H55.5013L55.6113 18.8999H57.6012V6.53994H54.9613V16.4699C54.6812 16.9599 54.0312 17.3199 53.4212 17.3199C52.6512 17.3199 52.4113 16.7099 52.4113 15.6899V6.53994H49.7812V15.8099C49.7812 17.8199 50.3613 19.0899 52.2713 19.0899Z">
+              </path>
+              <path d="M62.8261 18.8999V4.14994H65.8661V2.09994H57.1761V4.14994H60.2161V18.8999H62.8261Z"></path>
+              <path
+                d="M67.8728 19.0899C69.3328 19.0899 70.2428 18.4799 70.9928 17.3799H71.1028L71.2128 18.8999H73.2028V6.53994H70.5628V16.4699C70.2828 16.9599 69.6328 17.3199 69.0228 17.3199C68.2528 17.3199 68.0128 16.7099 68.0128 15.6899V6.53994H65.3828V15.8099C65.3828 17.8199 65.9628 19.0899 67.8728 19.0899Z">
+              </path>
+              <path
+                d="M80.6744 6.26994C79.3944 6.26994 78.4744 6.82994 77.8644 7.73994H77.7344C77.8144 6.53994 77.8744 5.51994 77.8744 4.70994V1.43994H75.3244L75.3144 12.1799L75.3244 18.8999H77.5444L77.7344 17.6999H77.8044C78.3944 18.5099 79.3044 19.0199 80.5144 19.0199C82.5244 19.0199 83.3844 17.2899 83.3844 13.6099V11.6999C83.3844 8.25994 82.9944 6.26994 80.6744 6.26994ZM80.7644 13.6099C80.7644 15.9099 80.4244 17.2799 79.3544 17.2799C78.8544 17.2799 78.1644 17.0399 77.8544 16.5899V9.23994C78.1244 8.53994 78.7244 8.02994 79.3944 8.02994C80.4744 8.02994 80.7644 9.33994 80.7644 11.7299V13.6099Z">
+              </path>
+              <path
+                d="M92.6517 11.4999C92.6517 8.51994 92.3517 6.30994 88.9217 6.30994C85.6917 6.30994 84.9717 8.45994 84.9717 11.6199V13.7899C84.9717 16.8699 85.6317 19.1099 88.8417 19.1099C91.3817 19.1099 92.6917 17.8399 92.5417 15.3799L90.2917 15.2599C90.2617 16.7799 89.9117 17.3999 88.9017 17.3999C87.6317 17.3999 87.5717 16.1899 87.5717 14.3899V13.5499H92.6517V11.4999ZM88.8617 7.96994C90.0817 7.96994 90.1717 9.11994 90.1717 11.0699V12.0799H87.5717V11.0699C87.5717 9.13994 87.6517 7.96994 88.8617 7.96994Z">
+              </path>
+            </g>
+          </svg>
+        </a>
+
+        <div class="server-region">IN</div>
+      </div>
+
+      <div class="middle-section">
+        <input class="search-bar" type="text" placeholder="Search">
+
+        <button class="search-button">
+          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M11 2a9 9 0 105.641 16.01.966.966 0 00.152.197l3.5 3.5a1 1 0 101.414-1.414l-3.5-3.5a1 1 0 00-.197-.153A8.96 8.96 0 0020 11a9 9 0 00-9-9Zm0 2a7 7 0 110 14 7 7 0 010-14Z">
+            </path>
+          </svg>
+        </button>
+
+
+        <button class="voice-search-button" aria-label="Search with your voice">
+          <svg class="mic-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M18.063 14.5a1 1 0 111.73 1A8.998 8.998 0 0113 19.942V22a1 1 0 11-2 0v-2.058A8.999 8.999 0 014.206 15.5l.866-.5.865-.5a7.002 7.002 0 0012.125 0ZM12 1a5 5 0 015 5v5a5 5 0 01-10 0V6a5 5 0 015-5ZM4.572 14.134a1 1 0 011.365.366l-1.731 1a1 1 0 01.366-1.366ZM12 3a3 3 0 00-3 3v5a3 3 0 106 0V6a3 3 0 00-3-3Z">
+            </path>
+          </svg>
+          <div class="tooltip">Search with your voice</div>
+        </button>
+
+      </div>
+
+      <div class="right-section">
+        <button class="create-button" title="" aria-label="Create">
+          <div aria-hidden="true" class="ytSpecButtonShapeNextIcon ytSpecButtonShapeNextElevatedContent"><span
+              class="ytIconWrapperHost" style="width: 24px; height: 24px;"><span
+                class="yt-icon-shape ytSpecIconShapeHost">
+                <div style="width: 100%; height: 100%; display: block; fill: white;"><svg
+                    xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false"
+                    aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+                    <path d="M12 3a1 1 0 00-1 1v7H4a1 1 0 000 2h7v7a1 1 0 002 0v-7h7a1 1 0 000-2h-7V4a1 1 0 00-1-1Z">
+                    </path>
+                  </svg></div>
+              </span></span></div>
+          <span class="create-text" role="text"
+            style="color: white; font-weight: 700; font-family: Roboto, arial; font-size: 14px;  margin-left: 5.5px; margin-top: -1px; margin-right: 2px;">Create</span>
+
+        </button>
+
+        <button class="bell-icon-button" aria-label="Notifications">
+          <yt-icon-badge-shape>
+            <div class="ytSpecIconBadgeShapeHost ytSpecIconBadgeShapeTypeNotification ytSpecIconBadgeShapeStyleOverlay">
+              <div class="bell-icon">
+                <div style="width: 100%; height: 100%; display: block; fill: currentcolor;"><svg
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false" aria-hidden="true"
+                    style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+                    <path
+                      d="M16 19a4 4 0 11-8 0H4.765C3.21 19 2.25 17.304 3.05 15.97l1.806-3.01A1 1 0 005 12.446V8a7 7 0 0114 0v4.446c0 .181.05.36.142.515l1.807 3.01c.8 1.333-.161 3.029-1.716 3.029H16ZM12 3a5 5 0 00-5 5v4.446a3 3 0 01-.428 1.543L4.765 17h14.468l-1.805-3.01A3 3 0 0117 12.445V8a5 5 0 00-5-5Zm-2 16a2 2 0 104 0h-4Z">
+                    </path>
+                  </svg></div>
+                </span></span>
+              </div>
+            </div>
+          </yt-icon-badge-shape>
+          <div class="tooltip">Notification</div>
+        </button>
+
+        <div class="user-profile-picture">
+          <a
+            href="https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252F&hl=en&ec=65620">
+            <img src="channel-pictures/channels4_profile(3).jpg">
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="categories-bar">
+      <!-- The 'active' class gives the white background to the selected chip -->
+      <button class="category-chip active">All</button>
+      <button class="category-chip">Music</button>
+      <button class="category-chip">Indie pop music</button>
+      <button class="category-chip">Mixes</button>
+      <button class="category-chip">Pop Rock</button>
+      <button class="category-chip">Cigarettes After Sex</button>
+      <button class="category-chip">Electropop</button>
+      <button class="category-chip">Dramedy</button>
+      <button class="category-chip">Romantic comedies</button>
+      <button class="category-chip">Drifting</button>
+      <button class="category-chip">Contemporary R&B</button>
+      <button class="category-chip">Chiron</button>
+    </div>
+  </header>
+
+  <nav class="side-bar">
+
+    <div class="sidebar-link">
+      <svg class="sidebar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          d="m11.485 2.143-8 4.8-2 1.2a1 1 0 001.03 1.714L3 9.567V20a2 2 0 002 2h5v-8h4v8h5a2 2 0 002-2V9.567l.485.29a1 1 0 001.03-1.714l-2-1.2-8-4.8a1 1 0 00-1.03 0Z">
+        </path>
+      </svg>
+      <div>Home</div>
+    </div>
+
+    <div class="sidebar-link">
+      <svg class="sidebar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          d="m13.467 1.19-8 4.7a5 5 0 00-.255 8.46 5 5 0 005.32 8.462l8-4.7a5 5 0 00.258-8.462 5 5 0 001.641-6.464l-.12-.217a5 5 0 00-6.844-1.78m5.12 2.79a2.999 2.999 0 01-1.067 4.107l-1.327.78a1 1 0 00.096 1.775l.943.423a3 3 0 01.288 5.323l-8 4.7a3 3 0 01-3.039-5.173l1.327-.78a1 1 0 00-.097-1.775l-.942-.423a3 3 0 01-.288-5.323l8-4.7a3 3 0 014.106 1.066ZM15 12l-5-3v6l5-3Z">
+        </path>
+      </svg>
+      <div>Shorts</div>
+    </div>
+
+    <div class="sidebar-link">
+      <svg class="sidebar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          d="M18 1H6a2 2 0 00-2 2h16a2 2 0 00-2-2Zm3 4H3a2 2 0 00-2 2v13a2 2 0 002 2h18a2 2 0 002-2V7a2 2 0 00-2-2ZM3 20V7h18v13H3Zm13-6.5L10 10v7l6-3.5Z">
+        </path>
+      </svg>
+      <div>Subscriptions</div>
+    </div>
+
+    <div class="sidebar-link">
+      <svg class="sidebar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 016.447 15.276 7 7 0 00-12.895 0A9 9 0 0112 3Zm0 2a4 4 0 100 8 4 4 0 000-8Zm0 2a2 2 0 110 4 2 2 0 010-4Zm-.1 9.001L11.899 16a5 5 0 014.904 3.61A8.96 8.96 0 0112 21a8.96 8.96 0 01-4.804-1.391 5 5 0 014.704-3.608Z">
+        </path>
+      </svg>
+      <div>You</div>
+    </div>
+
+  </nav>
+
+  <main>
+    <section class="video-grid">
+
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <a class="video-link" href="https://youtu.be/4nlBR9bm1Is?si=6C9G3aoCi49HTaok" target="_self">
+            <img src="video-thumbnail/hq720.avif">
+          </a>
+          <div class="video-duration">7:45</div>
+        </div>
+
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <a class="channel-link" href="https://www.youtube.com/@bugatti">
+              <img src="channel-pictures/channels4_profile.jpg">
+            </a>
+          </div>
+
+          <div class="video-details">
+            <div class="titlendoption">
+              <a class="video-link" href="https://youtu.be/4nlBR9bm1Is?si=6C9G3aoCi49HTaok" target="_self">
+                <div class="video-title">BUGATTI - A NEW ERA: Extreme Conditions</div>
+              </a>
+
+              
+              <div class="ytLockupMetadataViewModelMenuButton ytLockupMetadataViewModelVisible"><button-view-model
+                  class="ytSpecButtonViewModelHost"><button
+                    class="ytSpecButtonShapeNextHost ytSpecButtonShapeNextText ytSpecButtonShapeNextMono ytSpecButtonShapeNextSizeM ytSpecButtonShapeNextIconButton ytSpecButtonShapeNextEnableBackdropFilterExperiment"
+                    title="" aria-label="More actions" aria-disabled="false" style="background-color: #0f0f0f; border: none;">
+                    <div aria-hidden="true" class="ytSpecButtonShapeNextIcon ytSpecButtonShapeNextElevatedContent"><span
+                        class="ytIconWrapperHost" style="width: 24px; height: 24px;"><span
+                          class="yt-icon-shape ytSpecIconShapeHost">
+                          <div style="width: 100%; height: 100%;  fill: currentcolor;"><svg
+                              xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                              focusable="false" aria-hidden="true"
+                              style="pointer-events: none; display: inherit; width: 100%; height: 100%; filter: invert(1);">
+                              <path
+                                d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z">
+                              </path>
+                            </svg></div>
+                        </span></span></div><yt-touch-feedback-shape aria-hidden="true"
+                      class="ytSpecTouchFeedbackShapeHost ytSpecTouchFeedbackShapeTouchResponse">
+                      <div class="ytSpecTouchFeedbackShapeStroke"></div>
+                      <div class="ytSpecTouchFeedbackShapeFill"></div>
+                    </yt-touch-feedback-shape>
+                  </button></button-view-model></div>
+            </div>
+
+            <div class="channel-name">Bugatti</div>
+            <div class="video-stats">1m views &bull; 2 months ago</div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <a class="video-link" href="https://youtu.be/VaBRY6PYNLI?si=JQlTfCcYeGMsIQwS" target="_self">
+            <img src="video-thumbnail/hq720 (1).avif">
+          </a>
+          <div class="video-duration">3:03</div>
+        </div>
+
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <a class="channel-link" href="https://www.youtube.com/@Faouzia">
+              <img src="channel-pictures/channels4_profile1.jpg">
+            </a>
+          </div>
+
+          <div class="video-details">
+            <a class="video-link" href="https://youtu.be/VaBRY6PYNLI?si=JQlTfCcYeGMsIQwS" target="_blank">
+              <div class="video-title">Faouzia - You Don't Even Know me (Stripped)</div>
+            </a>
+            <div class="channel-name">Faouzia</div>
+            <div class="video-stats">27m views &bull; 6 years ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <a class="video-link" href="https://youtu.be/vMc_pWm7G7o?si=2On7oqAr6bI3hPbY" target="_blank">
+            <img src="video-thumbnail/hq7203.avif">
+          </a>
+          <div class="video-duration">2:35</div>
+        </div>
+
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <a class="channel-link" href="https://www.youtube.com/@Netflix">
+              <img src="channel-pictures/channels4_profile2.jpg">
+            </a>
+          </div>
+
+          <div class="video-details">
+            <a class="video-link" href="https://youtu.be/vMc_pWm7G7o?si=2On7oqAr6bI3hPbY" target="_blank">
+              <div class="video-title">Something Very Bad Is Going to Happen | Official Trailer | Netflix</div>
+            </a>
+            <div class="channel-name">Netflix</div>
+            <div class="video-stats">4m views &bull; 4 months ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <a class="video-link" href="https://youtu.be/v4pi1LxuDHc?si=KE2HeUPT9IJfbiiz" target="_blank">
+            <img src="video-thumbnail/hqdefault(8).jpg">
+          </a>
+          <div class="video-duration">4:46</div>
+        </div>
+
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <a class="channel-link" href="https://www.youtube.com/@TheLumineers">
+              <img src="channel-pictures/channels4_profile3.jpg">
+            </a>
+          </div>
+
+          <div class="video-details">
+            <a class="video-link" href="https://youtu.be/v4pi1LxuDHc?si=KE2HeUPT9IJfbiiz" target="_blank">
+              <div class="video-title">The Lumineers - Sleep On The Floor (Official Video)</div>
+            </a>
+            <div class="channel-name">The Lumineers</div>
+            <div class="video-stats">1m views &bull; 2 months ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <a class="video-link" href="https://youtu.be/VkMv0CNPbWM?si=gDCQlzWx45VQIPTG" target="_blank">
+            <img src="video-thumbnail/hqdefault.jpg">
+          </a>
+          <div class="video-duration">3:35</div>
+        </div>
+
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <a class="channel-link" href="https://www.youtube.com/@TheFavors">
+              <img src="channel-pictures/channels4_profile (1).jpg">
+            </a>
+          </div>
+
+          <div class="video-details">
+            <a class="video-link" href="https://youtu.be/VkMv0CNPbWM?si=gDCQlzWx45VQIPTG" target="_blank">
+              <div class="video-title">The Favors - David's Brother (Official Music Video)</div>
+            </a>
+            <div class="channel-name">The Favors</div>
+            <div class="video-stats">657k views &bull; 10 months ago</div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <a class="video-link" href="https://youtu.be/chWSB02NmPU?si=v6hChAHW5zedXdlL" target="_blank">
+            <img src="video-thumbnail/hq7202.avif">
+          </a>
+          <div class="video-duration">6:41</div>
+        </div>
+
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <a class="channel-link" href="https://www.youtube.com/@Bugatti">
+              <img src="channel-pictures/channels4_profile.jpg">
+            </a>
+          </div>
+
+          <div class="video-details">
+            <a class="video-link" href="https://youtu.be/chWSB02NmPU?si=v6hChAHW5zedXdlL" target="_blank">
+              <div class="video-title">BUGATTI - A NEW ERA: Immersive Dynamics</div>
+            </a>
+            <div class="channel-name">Bugatti</div>
+            <div class="video-stats">55k views &bull; 8 hours ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <a class="video-link" href="https://youtu.be/SA7AIQw-7Ms?si=hulwjPDOAV9dOWsn" target="_blank">
+            <img src="video-thumbnail/hq7209.avif">
+          </a>
+          <div class="video-duration">4:47</div>
+        </div>
+
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <a class="channel-link" href="https://www.youtube.com/@GEazyMusicVEVO">
+              <img src="channel-pictures/channels4_profile44.jpg">
+            </a>
+          </div>
+
+          <div class="video-details">
+            <a class="video-link" href="https://youtu.be/SA7AIQw-7Ms?si=hulwjPDOAV9dOWsn" target="_blank">
+              <div class="video-title">G-Eazy & Halsey - Him & I (Official Video)</div>
+            </a>
+            <div class="channel-name">G-Eazy</div>
+            <div class="video-stats">883m views &bull; 8 years ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <a class="video-link" href="https://youtu.be/S2TaAcwC_zI?si=JCVY02ho0epCQEf-" target="_blank">
+            <img src="video-thumbnail/hq7204.avif">
+          </a>
+          <div class="video-duration">2:56</div>
+        </div>
+
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <a class="video-link" href="https://www.youtube.com/@kenyagracebaby" target="_blank">
+              <img src="channel-pictures/channels4_profile5.jpg">
+            </a>
+          </div>
+
+          <div class="video-details">
+            <a class="video-link" href="https://youtu.be/S2TaAcwC_zI?si=JCVY02ho0epCQEf-" target="_blank">
+              <div class="video-title">Kenya Grace - Strangers(Official Lyric Video)</div>
+            </a>
+            <div class="channel-name">Kenya Grace</div>
+            <div class="video-stats">133m views &bull; 2 years ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <a class="video-link" href="https://youtu.be/1JQtFM1kUJ8?si=sgW4E7zxVL2TRCqb" target="_blank">
+            <img src="video-thumbnail/hq7205.avif">
+          </a>
+          <div class="video-duration">3:11</div>
+        </div>
+
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <a class="channel-link" href="https://www.youtube.com/@stevie_emerson" target="_blank">
+              <img src="channel-pictures/unnamed.jpg">
+            </a>
+          </div>
+
+          <div class="video-details">
+            <a class="video-link" href="https://youtu.be/1JQtFM1kUJ8?si=sgW4E7zxVL2TRCqb" target="_blank">
+              <div class="video-title">When You're Not Sure If She Has a Boyfriend</div>
+            </a>
+            <div class="channel-name">Stevie Emerson</div>
+            <div class="video-stats">134k views &bull; 2 months ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <a class="video-link" href="https://youtu.be/fFHR164mnjg?si=p7vJcFsOwmkbMALZ" target="_blank">
+            <img src="video-thumbnail/hq7206.avif">
+          </a>
+          <div class="video-duration">4:48</div>
+        </div>
+
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <a class="channel-link" href="https://www.youtube.com/@angusandjuliastone" target="_blank">
+              <img src="channel-pictures/channels4_profile6.jpg">
+            </a>
+          </div>
+
+          <div class="video-details">
+            <a class="video-link" href="https://youtu.be/fFHR164mnjg?si=p7vJcFsOwmkbMALZ" target="_blank">
+              <div class="video-title">Angus & Julia Stone - Chateau</div>
+            </a>
+            <div class="channel-name">Angus & Julia Stone</div>
+            <div class="video-stats">38m views &bull; 8 years ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <a class="video-link" href="https://youtu.be/PAKFzFqJa58?si=eaF2EssxkbFU_3Fr" target="_blank">
+            <img src="video-thumbnail/hq7207.avif">
+          </a>
+          <div class="video-duration">3:31</div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <a class="channel-link" href="https://www.youtube.com/@charlieputh" target="_blank">
+              <img src="channel-pictures/channels4_profile7.jpg">
+            </a>
+          </div>
+          <div class="video-details">
+            <a class="video-link" href="https://youtu.be/PAKFzFqJa58?si=eaF2EssxkbFU_3Fr" target="_blank">
+              <div class="video-title">CHARLIE PUTH - THAT'S NOT HOW THIS WORKS (FEAT. DAN + SHAY) [official music
+                video]
+              </div>
+            </a>
+            <div class="channel-name">Charlie Puth</div>
+            <div class="video-stats">24m views &bull; 3 years ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <a class="video-link" href="https://youtu.be/6cRctjPRv6M?si=eh2OzBDxZUmvSefU" target="_blank">
+            <img src="video-thumbnail/hq7208.avif">
+          </a>
+          <div class="video-duration">5:59</div>
+        </div>
+
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <a class="channel-link" href="https://www.youtube.com/@boringlife." target="_blank">
+              <img src="channel-pictures/unnamed2.jpg">
+            </a>
+          </div>
+
+          <div class="video-details">
+            <a class="video-link" href="https://youtu.be/6cRctjPRv6M?si=eh2OzBDxZUmvSefU" target="_blank">
+              <div class="video-title">bedroom - in my head</div>
+            </a>
+            <div class="channel-name">boringlife</div>
+            <div class="video-stats">51m views &bull; 7 years ago</div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+</body>
+
+</html>
