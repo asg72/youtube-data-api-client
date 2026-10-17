@@ -1,4 +1,4 @@
-# Video Streaming Client UI
+# Video Streaming Client UI 
 
 A high-performance, fully responsive  front-end interface engineered to replicate modern video streaming platforms. This project focuses on pixel-perfect UI/UX implementation, advanced CSS architecture, and complex z-index layering, serving as the foundational client-side architecture before integrating dynamic data APIs.
 
